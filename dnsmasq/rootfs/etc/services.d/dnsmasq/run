@@ -3,5 +3,5 @@ CONFIG="/etc/dnsmasq.conf"
 
 # Run dnsmasq
 bashio::log.info "Starting dnsmasq..."
-exec dnsmasq -C "${CONFIG}" -z < /dev/null
+exec dnsmasq -C "${CONFIG}" -z --quiet-dhcp --quiet-dhcp6 --quiet-ra < /dev/null
 
